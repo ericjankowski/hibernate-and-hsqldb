@@ -19,6 +19,8 @@ and unpack .zip file.
 3.  Create application (write some Java code).  Code here is taken from Chapter 2 of Java Persistance with Hibernate by Christian Bauer and Gavin King
 
 	a.  Add dependencies to pom.xml (page 42)
+	b.  Create Message class (page 43)
+	c.  Create hibernate mapping file - Message.hbm.xml (page 45)
 
 
 
