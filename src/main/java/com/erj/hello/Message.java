@@ -1,4 +1,4 @@
-package com.erj;
+package com.erj.hello;
 
 public class Message {
 	private Long id;

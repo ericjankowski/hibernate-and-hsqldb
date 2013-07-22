@@ -21,6 +21,8 @@ and unpack .zip file.
 	a.  Add dependencies to pom.xml (page 42)
 	b.  Create Message class (page 43)
 	c.  Create hibernate mapping file - Message.hbm.xml (page 45)
+	d.  Create HibernateUtil class (page 56)
+	e.  Create HelloWorld class with main method (page 46)
 
 
 
