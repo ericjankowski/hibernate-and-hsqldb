@@ -4,7 +4,7 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
     
 <hibernate-mapping>
-    <class name="com.erj.Message" table="MESSAGES">
+    <class name="com.erj.hello.Message" table="MESSAGES">
         <id name ="id" column="MESSAGE_ID">
             <generator class="increment" />
         </id>

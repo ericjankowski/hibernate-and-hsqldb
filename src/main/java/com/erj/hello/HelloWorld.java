@@ -9,22 +9,34 @@ import org.hibernate.Transaction;
 import com.erj.persistence.HibernateUtil;
 
 public class HelloWorld {
+	
+	static Long msgId = 0L;
+	
 	public static void main(String [] args){
 		
-		//First Unit of Work
+		firstUnitOfWork();
+		
+		secondUnitOfWork();
+		
+		thirdUnitOfWork();
+		
+		HibernateUtil.shutdown();
+	}
+
+	private static void firstUnitOfWork() {
 		Session firstSession = HibernateUtil.getSessionFactory().openSession();
 		Transaction firstTransaction = firstSession.beginTransaction();
 		
 		Message message = new Message("Hello, World!");
-		Long msgId = (Long)firstSession.save(message);
+		msgId = (Long)firstSession.save(message);
 		
 		System.out.println("Saved message with id: " + msgId);
 		
 		firstTransaction.commit();
 		firstSession.close();
-		
-		
-		//Second Unit of Work
+	}
+
+	private static void secondUnitOfWork() {
 		Session secondSession = HibernateUtil.getSessionFactory().openSession();
 		Transaction secondTransaction = secondSession.beginTransaction();
 		
@@ -39,8 +51,18 @@ public class HelloWorld {
 		
 		secondTransaction.commit();
 		secondSession.close();
+	}
+
+	private static void thirdUnitOfWork() {
+		Message message;
+		Session thirdSession = HibernateUtil.getSessionFactory().openSession();
+		Transaction thirdTransaction = thirdSession.getTransaction();
 		
-		HibernateUtil.shutdown();
+		message = (Message) thirdSession.get(Message.class, msgId);
+		message.setText("Greetings, Earthling.");
+		message.setNextMessage(new Message("Take me to your leader."));
 		
+		thirdTransaction.commit();
+		thirdSession.close();
 	}
 }

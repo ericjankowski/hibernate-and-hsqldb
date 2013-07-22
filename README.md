@@ -22,7 +22,8 @@ and unpack .zip file.
 	b.  Create Message class (page 43)
 	c.  Create hibernate mapping file - Message.hbm.xml (page 45)
 	d.  Create HibernateUtil class (page 56)
-	e.  Create HelloWorld class with main method (page 46)
+	e.  Create HelloWorld class with main method (page 46 and 48)
+	f.  Create hibernate.cfg.xml file (page 51)
 
 
 
