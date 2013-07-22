@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-configuration SYSTEM
     "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
     
@@ -19,6 +20,7 @@
         <!-- Let's see some pretty SQL in stdout -->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
         
         <!-- Mapping files -->
         <mapping resource="com.erj.hello/Message.hbm.xml" />
