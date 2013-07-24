@@ -16,7 +16,7 @@ http://sourceforge.net/projects/hsqldb/files/
 
 and unpack .zip file.
 
-3.  Create application (write some Java code).  Code here is taken from Chapter 2 of Java Persistance with Hibernate by Christian Bauer and Gavin King
+3.  Create application (do some code things).  Code here is taken from Chapter 2 of Java Persistance with Hibernate by Christian Bauer and Gavin King
 
 	a.  Add dependencies to pom.xml (page 42)
 	b.  Copy jar dependencies into /lib folder (for Ant build -- Yes, this is dumb)
@@ -26,12 +26,15 @@ and unpack .zip file.
 	e.  Create HelloWorld class with main method (page 46 and 48)
 	f.  Create hibernate.cfg.xml file (page 51)
 	g.  Create log4j.properties file (page 58)
-	h.  Create build.xml file (page 60)
+	h.  Create build.xml file (page 60 and 65)
+	
+4.  Start HSQLDB :: java -classpath ${PROJECT_DIRECTORY}/lib/hsqldb-2.2.9.jar org.hsqldb.Server (page 63)
 
 
 
 TODO
 ====
 
-1. Add hsql files to .gitignore
-2. Find a way to perform functions of the Ant build with Maven
+1. Find a way to perform functions of the Ant build with Maven
+2. Find a way to connect to the latest HSQLDB version
+3. Find a way to perform functions of the Ant build with Gradle
