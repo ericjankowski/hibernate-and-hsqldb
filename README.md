@@ -33,11 +33,15 @@ and unpack .zip file.
 5.  Export Schema:  run `ant schemaexport`
 
 6.  Run main method:
-    a.  ant run
+    a.  run `ant run`
     -- or --
     b.  Eclipse: Run As... Java Application
     
-7.  Profit
+7.  Behold the data
+    -- run `ant dbmanager`
+    -- run `SELECT * FROM "PUBLIC"."MESSAGES"`
+    
+8.  Profit
 
 
 TODO
