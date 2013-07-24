@@ -30,7 +30,9 @@ and unpack .zip file.
 	
 4.  Start HSQLDB :: java -classpath ${PROJECT_DIRECTORY}/lib/hsqldb-2.2.9.jar org.hsqldb.Server (page 63)
 
-5.  Export Schema:  run `ant schemaexport`
+5.  Export Schema:  
+    a.  run `ant schemaexport`
+    b.  Take a look at the generated helloworld-ddl.sql file
 
 6.  Run main method:
     a.  run `ant run`
