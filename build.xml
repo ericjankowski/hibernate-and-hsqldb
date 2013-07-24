@@ -58,8 +58,22 @@
 				create="true"
 				export="true"
 				outputfilename="helloworld-ddl.sql"
-				delimeter=";"
+				delimiter=";"
 				format="true" />
 		</hibernatetool>
+	</target>
+	
+	<target name="dbmanager" description="Start HSQLDB manager">
+		<java
+			classname="org.hsqldb.util.DatabaseManagerSwing"
+			fork="yes"
+			classpathref="project.classpath"
+			failonerror="true">
+			
+			<arg value="-url" />
+			<arg value="jdbc:hsqldb:hsql://localhost/" />
+			<arg value="-driver" />
+			<arg value="org.hsqldb.jdbcDriver" />
+		</java>
 	</target>
 </project>

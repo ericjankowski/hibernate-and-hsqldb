@@ -26,7 +26,7 @@ and unpack .zip file.
 	e.  Create HelloWorld class with main method (page 46 and 48)
 	f.  Create hibernate.cfg.xml file (page 51)
 	g.  Create log4j.properties file (page 58)
-	h.  Create build.xml file (page 60 and 65)
+	h.  Create build.xml file (page 60, 65, 67)
 	
 4.  Start HSQLDB :: java -classpath ${PROJECT_DIRECTORY}/lib/hsqldb-2.2.9.jar org.hsqldb.Server (page 63)
 
