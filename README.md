@@ -30,6 +30,14 @@ and unpack .zip file.
 	
 4.  Start HSQLDB :: java -classpath ${PROJECT_DIRECTORY}/lib/hsqldb-2.2.9.jar org.hsqldb.Server (page 63)
 
+5.  Export Schema:  run `ant schemaexport`
+
+6.  Run main method:
+    a.  ant run
+    -- or --
+    b.  Eclipse: Run As... Java Application
+    
+7.  Profit
 
 
 TODO

@@ -54,7 +54,6 @@ public class HelloWorld {
 	}
 
 	private static void thirdUnitOfWork() {
-		
 		Message message;
 		Session thirdSession = HibernateUtil.getSessionFactory().openSession();
 		Transaction thirdTransaction = thirdSession.beginTransaction();
@@ -62,7 +61,6 @@ public class HelloWorld {
 		message = (Message) thirdSession.get(Message.class, msgId);
 		message.setText("Greetings, Earthling.");
 		message.setNextMessage(new Message("Take me to your leader."));
-		System.out.println("*********\nHere\n********");
 		
 		thirdTransaction.commit();
 		thirdSession.close();
