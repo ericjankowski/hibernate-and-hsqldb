@@ -36,6 +36,7 @@ public class HelloWorld {
 		firstSession.close();
 	}
 
+	@SuppressWarnings("rawtypes")
 	private static void secondUnitOfWork() {
 		Session secondSession = HibernateUtil.getSessionFactory().openSession();
 		Transaction secondTransaction = secondSession.beginTransaction();
