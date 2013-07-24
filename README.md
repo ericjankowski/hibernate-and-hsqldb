@@ -8,13 +8,9 @@ Steps to recreate
 
 1.  Create Maven quickstart application using:  
 
-mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1
+    mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1
 
-2.  Download HSQLDB from: 
-
-http://sourceforge.net/projects/hsqldb/files/ 
-
-and unpack .zip file.
+2.  Download HSQLDB from: http://sourceforge.net/projects/hsqldb/files/ and unpack .zip file.
 
 3.  Create application (do some code things).  Code here is taken from Chapter 2 of Java Persistance with Hibernate by Christian Bauer and Gavin King
 
@@ -39,16 +35,23 @@ and unpack .zip file.
 4.  Start HSQLDB :: java -classpath ${PROJECT_DIRECTORY}/lib/hsqldb-2.2.9.jar org.hsqldb.Server (page 63)
 
 5.  Export Schema:  
+    
     a.  run `ant schemaexport`
+    
     b.  Take a look at the generated helloworld-ddl.sql file
 
 6.  Run main method:
+    
     a.  run `ant run`
+    
     -- or --
+    
     b.  Eclipse: Run As... Java Application
     
 7.  Behold the data
+    
     -- run `ant dbmanager`
+    
     -- run `SELECT * FROM "PUBLIC"."MESSAGES"`
     
 8.  Profit
